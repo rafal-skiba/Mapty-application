@@ -29,7 +29,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 map.on('click', function (mapE) {
 mapEvent = mapE;
-form.classList.toggle('hidden');
+form.classList.remove('hidden');
 inputDistance.focus();
     
 })
@@ -51,7 +51,7 @@ const {lat, lng} = mapEvent.latlng;
         maxWidth: 250,
         minWidth: 100,
         autoClose: false,
-        closeOnclick: false,
+        closeOnClick: false,
         className: 'running-popup'
     }))
     .setPopupContent('working in progress')
