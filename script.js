@@ -156,7 +156,20 @@ class App {
 
     //Render workout on map as marker
 
+    this.renderWorkoutMarker(workout)
 
+   
+
+    //Clear input fields
+    inputDistance.value =
+      inputDuration.value =
+      inputCadence.value =
+      inputElevation.value =
+        '';
+  }
+
+ 
+ renderWorkoutMarker(workout) {
     L.marker(workout.coords)
     .addTo(this.#map)
     .bindPopup(
@@ -170,17 +183,7 @@ class App {
     )
     .setPopupContent('dupa')
     .openPopup();
-
-    //Clear input fields
-    inputDistance.value =
-      inputDuration.value =
-      inputCadence.value =
-      inputElevation.value =
-        '';
-  }
-
- 
-  
+ } 
   
 }
 
